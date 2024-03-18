@@ -90,10 +90,6 @@ app.use("/", userRouter);
 
 
 
-app.get("/", (req, res) =>{
-    res.send("root is working");
-});
-
 
 app.all("*",( req, res, next) =>{
     next(new ExpressError(404, "Page not found"));
